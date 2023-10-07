@@ -1,3 +1,4 @@
+import { NavLink } from "react-router-dom";
 import TicketsCard from "../../Components/TicketsCard/TicketsCard";
 
 const Tickets = () => {
@@ -16,9 +17,11 @@ const Tickets = () => {
                     </div>
 
                     <div>
-                        <button className="text-xl bg-[#181645] py-5 px-7 rounded-xl text-white font-medium w-60 mb-10">
-                            See Price Details
-                        </button>
+                        <NavLink to='/tickets'>
+                            <button className="text-xl bg-[#181645] py-5 px-7 rounded-xl text-white font-medium w-60 mb-10">
+                                See Price Details
+                            </button>
+                        </NavLink>
                     </div>
                 </div>
 

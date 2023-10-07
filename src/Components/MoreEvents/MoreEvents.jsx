@@ -1,9 +1,10 @@
 import { AiFillClockCircle } from "react-icons/ai";
 import { FaLocationDot } from "react-icons/fa6";
+import { NavLink } from "react-router-dom";
 
 const MoreEvents = () => {
     return (
-        <div className="max-w-7xl mx-auto px-5 pb-20 md:pb-28 lg:pb-64 relative">
+        <div className="max-w-7xl mx-auto px-5 py-20 md:py-28 lg:py-34 relative">
             <div className="flex flex-col xl:flex-row justify-between xl:gap-32">
                 <div className="xl:pe-20 flex flex-col justify-center">
                     <h1 className="text-4xl sm:text-5xl font-bold leading-tight text-[#211f54] mb-6 md:text-center xl:text-left">
@@ -14,11 +15,13 @@ const MoreEvents = () => {
                         Prepare to be inspired, informed, and motivated as these accomplished individuals take the stage to share their knowledge and ideas.
                     </p>
 
-                    <div className="flex sm:justify-center xl:justify-start">
-                        <button className="text-xl bg-[#4845e3] py-5 px-7 rounded-xl text-white font-medium w-60 mb-10">
-                            Get Started
-                        </button>
-                    </div>
+                    <NavLink to='/services'>
+                        <div className="flex sm:justify-center xl:justify-start">
+                            <button className="text-xl bg-[#4845e3] py-5 px-7 rounded-xl text-white font-medium w-60 mb-10">
+                                Get Started
+                            </button>
+                        </div>
+                    </NavLink>
                 </div>
 
                 <div className="xl:relative">

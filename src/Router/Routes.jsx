@@ -8,6 +8,8 @@ import About from "../Pages/About/About";
 import Tickets from "../Pages/Tickets/Tickets";
 import Login from "../Pages/Login/Login";
 import Register from "../Pages/Register/Register";
+import PrivateRoute from "../Pages/PrivateRoute/PrivateRoute";
+import ServicesDetails from "../Pages/ServicesDetails/ServicesDetails";
 
 const router = createBrowserRouter([
     {
@@ -23,12 +25,16 @@ const router = createBrowserRouter([
                 element: <Services />
             },
             {
+                path: '/services/details',
+                element: <PrivateRoute><ServicesDetails /></PrivateRoute>
+            },
+            {
                 path: '/events',
                 element: <Events />
             },
             {
                 path: '/schedules',
-                element: <Schedules />
+                element: <PrivateRoute><Schedules /></PrivateRoute>
             },
             {
                 path: '/about',
@@ -36,7 +42,7 @@ const router = createBrowserRouter([
             },
             {
                 path: '/tickets',
-                element: <Tickets />
+                element: <PrivateRoute><Tickets /></PrivateRoute>
             },
             {
                 path: '/login',

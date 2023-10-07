@@ -1,12 +1,27 @@
-import { NavLink } from "react-router-dom";
-import { useState } from "react";
+import { NavLink, useNavigate } from "react-router-dom";
+import { useContext, useState } from "react";
 import { FaBars } from 'react-icons/fa';
 import { IoMdMicrophone } from "react-icons/io";
+import { AuthContext } from "../../Hooks/AuthProvider";
 
 
 
 const Navbar = () => {
     const [toggleMenu, setToggleMenu] = useState(!false);
+
+    const { user, logOut } = useContext(AuthContext);
+
+    const navigate = useNavigate();
+
+    const handleLogOut = () => {
+        logOut()
+            .then(() => {
+                navigate('/')
+            })
+            .catch(error => {
+                console.log(error.message);
+            })
+    }
 
     return (
         <div>
@@ -23,6 +38,10 @@ const Navbar = () => {
                         Home
                     </NavLink>
 
+                    <NavLink to='/about' className={({ isActive, isPending }) => isPending ? "text-black" : isActive ? "text-[#ff566a]" : ""}>
+                        About
+                    </NavLink>
+
                     <NavLink to='/services' className={({ isActive, isPending }) => isPending ? "text-black" : isActive ? "text-[#ff566a]" : ""}>
                         Services
                     </NavLink>
@@ -31,19 +50,28 @@ const Navbar = () => {
                         Schedules
                     </NavLink>
 
-                    <NavLink to='/about' className={({ isActive, isPending }) => isPending ? "text-black" : isActive ? "text-[#ff566a]" : ""}>
-                        About
-                    </NavLink>
-
                     <NavLink to='/tickets' className={({ isActive, isPending }) => isPending ? "text-black" : isActive ? "text-[#ff566a]" : ""}>
                         Tickets
                     </NavLink>
                 </div>
 
                 <div className="hidden xl:block text-lg font-medium">
-                    <NavLink to='/register' className={({ isActive, isPending }) => isPending ? "text-black" : isActive ? "bg-[#ff566a] text-white py-4 px-8 rounded-md" : "bg-[#e8e8e8] py-4 px-8 rounded-md hover:bg-[#ff566a] hover:text-white"}>
-                        Register
-                    </NavLink>
+                    {
+                        user ? <>
+                            <div className="flex justify-center items-center gap-4">
+                                <p>
+                                    {user?.email}
+                                </p>
+                                <NavLink onClick={handleLogOut} to='/login' className={({ isActive, isPending }) => isPending ? "text-black" : isActive ? "bg-[#e8e8e8] text-black py-4 px-8 rounded-md" : "bg-[#e8e8e8] py-4 px-8 rounded-md hover:bg-[#ff566a] hover:text-white"}>
+                                    Logout
+                                </NavLink>
+                            </div>
+                        </> : <>
+                            <NavLink to='/login' className={({ isActive, isPending }) => isPending ? "text-black" : isActive ? "bg-[#ff566a] text-white py-4 px-8 rounded-md" : "bg-[#e8e8e8] py-4 px-8 rounded-md hover:bg-[#ff566a] hover:text-white"}>
+                                Login
+                            </NavLink>
+                        </>
+                    }
                 </div>
 
                 <div onClick={() => setToggleMenu(!toggleMenu)} className="xl:hidden flex items-center cursor-pointer text-2xl">
@@ -56,6 +84,10 @@ const Navbar = () => {
                             Home
                         </NavLink>
 
+                        <NavLink to='/about' className={({ isActive, isPending }) => isPending ? "text-black" : isActive ? "text-[#ff566a]" : ""}>
+                            About
+                        </NavLink>
+
                         <NavLink to='/services' className={({ isActive, isPending }) => isPending ? "text-black" : isActive ? "text-[#ff566a]" : ""}>
                             Services
                         </NavLink>
@@ -64,18 +96,29 @@ const Navbar = () => {
                             Schedules
                         </NavLink>
 
-                        <NavLink to='/about' className={({ isActive, isPending }) => isPending ? "text-black" : isActive ? "text-[#ff566a]" : ""}>
-                            About
-                        </NavLink>
-
                         <NavLink to='/tickets' className={({ isActive, isPending }) => isPending ? "text-black" : isActive ? "text-[#ff566a]" : ""}>
                             Tickets
                         </NavLink>
 
                         <div className="xl:hidden text-lg font-medium mt-6">
-                            <NavLink to='/register' className={({ isActive, isPending }) => isPending ? "text-black" : isActive ? "bg-[#ff566a] text-white py-4 px-8 rounded-md" : "bg-[#e8e8e8] py-4 px-8 rounded-md hover:bg-[#ff566a] hover:text-white"}>
-                                Register
-                            </NavLink>
+                            {
+                                user ? <>
+                                    <div className="flex flex-col xl:flex-row xl:items-center items-start gap-4">
+
+                                        <NavLink onClick={handleLogOut} to='/login' className={({ isActive, isPending }) => isPending ? "text-black" : isActive ? "bg-[#e8e8e8] text-black py-4 px-8 rounded-md" : "bg-[#e8e8e8] py-4 px-8 rounded-md hover:bg-[#ff566a] hover:text-white"}>
+                                            Logout
+                                        </NavLink>
+
+                                        <p>
+                                            {user?.email}
+                                        </p>
+                                    </div>
+                                </> : <>
+                                    <NavLink to='/login' className={({ isActive, isPending }) => isPending ? "text-black" : isActive ? "bg-[#ff566a] text-white py-4 px-8 rounded-md" : "bg-[#e8e8e8] py-4 px-8 rounded-md hover:bg-[#ff566a] hover:text-white"}>
+                                        Login
+                                    </NavLink>
+                                </>
+                            }
                         </div>
                     </div>
                 </div>
