@@ -1,6 +1,10 @@
+import { useLoaderData } from "react-router-dom";
 import ServicesCard from "../../Components/ServicesCard/ServicesCard";
 
 const Services = () => {
+
+    const servicesData = useLoaderData();
+
     return (
         <div>
             <div className="max-w-7xl mx-auto px-5 py-20 md:py-28 lg:py-36">
@@ -15,12 +19,9 @@ const Services = () => {
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7">
-                    <ServicesCard />
-                    <ServicesCard />
-                    <ServicesCard />
-                    <ServicesCard />
-                    <ServicesCard />
-                    <ServicesCard />
+                    {
+                        servicesData.map(service => <ServicesCard key={service.id} service={service} />)
+                    }
                 </div>
             </div>
         </div>

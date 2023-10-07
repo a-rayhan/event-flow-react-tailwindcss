@@ -4,7 +4,7 @@ import { NavLink } from "react-router-dom";
 
 const MoreEvents = () => {
     return (
-        <div className="max-w-7xl mx-auto px-5 py-20 md:py-28 lg:py-34 relative">
+        <div className="max-w-7xl mx-auto px-5 py-20 md:py-28 lg:py-34 xl:pb-56 relative">
             <div className="flex flex-col xl:flex-row justify-between xl:gap-32">
                 <div className="xl:pe-20 flex flex-col justify-center">
                     <h1 className="text-4xl sm:text-5xl font-bold leading-tight text-[#211f54] mb-6 md:text-center xl:text-left">

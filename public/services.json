@@ -1,0 +1,50 @@
+[
+    {
+        "id": 1,
+        "title": "Event Planning",
+        "description": "Our Event Planning service offers comprehensive and tailored event management solutions to ensure your event is a resounding success.",
+        "details": "Our Event Planning service offers comprehensive and tailored event management solutions to ensure your event is a resounding success. We work closely with you to understand your vision, goals, and preferences, crafting an event plan that aligns perfectly with your objectives. From budget management to meticulous timeline planning, our experienced team takes care of every detail, ensuring a seamless and well-organized event. We coordinate with vendors, negotiate contracts, and manage logistics to bring your event to life in the most efficient and cost-effective manner. Whether it's a corporate conference, a product launch, or a social gathering, our event planning expertise will make it a memorable occasion for all. Our Event Planning service encompasses a wide range of tasks, including budget management, timeline planning, vendor coordination, logistics, risk assessment, and contingency planning. We handle everything from event concept and design to execution and post-event analysis. Our team ensures that every element of your event is meticulously planned and executed to perfection, keeping your specific requirements in mind.",
+        "price": "$1500 - $5000",
+        "image": "https://i.ibb.co/2N6NbYD/event-planning.jpg"
+    },
+    {
+        "id": 2,
+        "title": "Venue Selection",
+        "description": "Choosing the right venue is a critical aspect of event success, and our Venue Selection service is designed to help you find the perfect match.",
+        "details": "Choosing the right venue is a critical aspect of event success, and our Venue Selection service is designed to help you find the perfect match. We understand that each event has unique requirements, and we diligently research and present a selection of venues that align with your event's goals, theme, and target audience. Our expert team conducts site visits, negotiates terms, and manages contracts to ensure you get the best value and amenities from the chosen venue. Whether you need a cozy space for an intimate gathering or a grand hall for a large-scale conference, we have you covered. Our Venue Selection service involves thorough research of venues based on your event requirements. We consider factors such as location, capacity, facilities, accessibility, and ambiance. After shortlisting suitable options, we arrange site visits to assess the spaces firsthand. We negotiate with venue representatives to secure favorable terms and conditions, ensuring a smooth booking process for your event.",
+        "price": "$800 - $3000",
+        "image": "https://i.ibb.co/xS626G7/venue-selection.jpg"
+    },
+    {
+        "id": 3,
+        "title": "Event Design",
+        "description": "Elevate your event's visual appeal and create an immersive experience with our Design service. Our team of creative for your event.",
+        "details": "Elevate your event's visual appeal and create an immersive experience with our Event Design service. Our team of creative experts works closely with you to conceptualize and craft a unique theme and design for your event. From color schemes and decor to overall aesthetics, we ensure every element aligns with your event's purpose and resonates with your audience. We pay meticulous attention to detail, transforming your vision into a visually stunning reality that leaves a lasting impression on attendees. Our Event Design service encompasses theme conceptualization, decor planning, layout design, signage, branding, and overall aesthetic coordination. We consider your target audience, event goals, and brand identity to create a cohesive and impactful design. Whether you seek a modern, minimalist look or a lavish, opulent atmosphere, we tailor the design to match your preferences and objectives.",
+        "price": "$1000 - $4000",
+        "image": "https://i.ibb.co/fdgPt6V/event-design.jpg"
+    },
+    {
+        "id": 4,
+        "title": "Marketing & Promotion",
+        "description": "We develop strategic marketing plans and promotional campaigns tailored to your target audience and goals.",
+        "details": "Promoting your event effectively is key to its success, and our Marketing & Promotion service is here to make sure your event gets the attention it deserves. We develop strategic marketing plans and promotional campaigns tailored to your target audience and goals. Through targeted social media campaigns, email marketing, press releases, and eye-catching promotional materials, we create a buzz around your event, driving attendance and engagement. Our experienced team leverages various marketing channels to ensure maximum reach and impact for your event. Our Marketing & Promotion service includes market research, campaign strategy development, content creation, and campaign execution. We analyze your target audience and devise targeted marketing approaches to engage them effectively. From eye-catching visuals to compelling copy, we create marketing materials that convey your event's message and value proposition, enticing potential attendees to register and participate.",
+        "price": "$500 - $2500",
+        "image": "https://i.ibb.co/sgFtMrX/marketing-promotion.jpg"
+    },
+    {
+        "id": 5,
+        "title": "Registration & Ticket",
+        "description": "We provide a streamlined and user-friendly online registration system, allowing attendees to easily sign up for your event.",
+        "details": "Simplify the event registration process and optimize ticket sales with our Registration & Ticket service. We provide a streamlined and user-friendly online registration system, allowing attendees to easily sign up for your event. Additionally, we manage ticket sales, offering various ticketing options to accommodate different attendee preferences. Our registration system ensures a smooth and hassle-free experience for both attendees and organizers, making event management a breeze. Our Registration & Ticket service involves setting up an online registration portal tailored to your event. Attendees can register, choose ticket types, and complete transactions securely and conveniently. We handle ticket sales management, attendee data collection, and provide real-time reporting to keep you informed of registration numbers and trends, enabling you to make informed decisions.",
+        "price": "$400 - $1500",
+        "image": "https://i.ibb.co/2nF0P5L/registration-ticket.jpg"
+    },
+    {
+        "id": 6,
+        "title": "Audio-Visual Production",
+        "description": "We provide top-notch audio, lighting, and video production to ensure your event is visually stunning and impressive.",
+        "details": "Enhance the overall event experience and captivate your audience with our Audio-Visual Production service. We provide top-notch audio, lighting, and video production services to ensure your event is visually stunning and acoustically impressive. Our team of professionals handles everything, from equipment setup to technical support during the event, ensuring seamless execution and a memorable audio-visual experience for all attendees. Our Audio-Visual Production service covers sound system setup, lighting design and operation, video production, live streaming, and technical support. We collaborate with experienced technicians and utilize state-of-the-art equipment to create a visually captivating and audibly engaging event environment. Whether it's presentations, performances, or interactive sessions, we ensure your event's audio-visual elements are of the highest quality.",
+        "price": "$1200 - $4000",
+        "image": "https://i.ibb.co/Tq4TbL0/audio-visual-production.jpg"
+    }
+]

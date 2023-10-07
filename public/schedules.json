@@ -1,0 +1,42 @@
+[
+    {
+        "id": 11,
+        "name": "Jeff Robins",
+        "job": "Developer",
+        "topic": "Emerging Technologies",
+        "description": "Welcome to our event schedule! We are delighted to present a conference showcasing the latest trends and innovations in the tech industry.",
+        "image": "https://i.ibb.co/fGQpBf5/jeff-robins.jpg",
+        "time": "2024-10-15 09:00",
+        "location": "Convention Center, New York"
+    },
+    {
+        "id": 12,
+        "name": "Mathew Borm",
+        "job": "Marketing Specialist",
+        "topic": "Digital Marketing Strategies",
+        "description": "A workshop focusing on effective digital marketing strategies and best practices.",
+        "image": "https://i.ibb.co/vQVPymm/mathew-borm.jpg",
+        "time": "2024-10-20 13:30",
+        "location": "Marketing Agency, San Francisco"
+    },
+    {
+        "id": 13,
+        "name": "John Doue",
+        "job": "Manager",
+        "topic": "Leadership Development",
+        "description": "We are delighted to present a lineup of exciting and engaging a seminar aimed at enhancing leadership skills and strategies for professional growth.",
+        "image": "https://i.ibb.co/71pvNqn/john-doue.jpg",
+        "time": "2024-11-05 10:00",
+        "location": "Business Center, Chicago"
+    },
+    {
+        "id": 14,
+        "name": "Abrham De",
+        "job": "Developer",
+        "topic": "Responsive Web Applications",
+        "description": "We are delighted to present a lineup of exciting and engaging events designed to entertain, educate, and inspire. A seminar aimed at enhancing leadership skills and strategies for professional growth.",
+        "image": "https://i.ibb.co/cYv2Xg3/abrham-de.jpg",
+        "time": "2024-11-05 10:00",
+        "location": "Convention Center, New York"
+    }
+]

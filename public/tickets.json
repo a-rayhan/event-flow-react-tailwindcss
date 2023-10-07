@@ -1,0 +1,17 @@
+[
+    {
+        "type": "Basic ticket",
+        "id": 1,
+        "price": "$60"
+    },
+    {
+        "type": "Standard ticket",
+        "id": 2,
+        "price": "$90"
+    },
+    {
+        "type": "Premium ticket",
+        "id": 3,
+        "price": "$120"
+    }
+]

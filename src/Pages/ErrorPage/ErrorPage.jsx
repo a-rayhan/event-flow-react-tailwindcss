@@ -6,6 +6,7 @@ const ErrorPage = () => {
     return (
         <div>
             <Navbar />
+            
             <div className="max-w-7xl mx-auto px-5 py-20 md:py-28 lg:py-36">
                 <div className="flex flex-col justify-center items-center">
                     <h1 className="text-8xl font-bold text-[#211f54] mb-2">
@@ -29,6 +30,7 @@ const ErrorPage = () => {
                     </NavLink>
                 </div>
             </div>
+
             <Footer />
         </div>
     );
