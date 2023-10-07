@@ -58,16 +58,27 @@ const Navbar = () => {
                 <div className="hidden xl:block text-lg font-medium">
                     {
                         user ? <>
-                            <div className="flex justify-center items-center gap-4">
-                                <p>
-                                    {user?.email}
-                                </p>
-                                <NavLink onClick={handleLogOut} to='/login' className={({ isActive, isPending }) => isPending ? "text-black" : isActive ? "bg-[#e8e8e8] text-black py-4 px-8 rounded-md" : "bg-[#e8e8e8] py-4 px-8 rounded-md hover:bg-[#ff566a] hover:text-white"}>
-                                    Logout
-                                </NavLink>
+                            <div className="flex justify-center items-center gap-4 cursor-pointer">
+                                <div className="dropdown dropdown-end">
+                                    <div className="avatar online m-1" tabIndex={0}>
+                                        <div className="w-14 rounded-full">
+                                            <img src={user?.photoURL} />
+                                        </div>
+                                    </div>
+                                    <ul className="p-2 shadow menu dropdown-content z-[1] bg-base-100 rounded-box">
+                                        <li className="py-4 px-8">{user?.displayName}</li>
+                                        <li className="py-4 px-8">{user?.email}</li>
+                                        <li>
+                                            <NavLink onClick={handleLogOut} to='/login' className='py-4 px-8'>
+                                                Logout
+                                            </NavLink>
+                                        </li>
+                                    </ul>
+                                </div>
+
                             </div>
                         </> : <>
-                            <NavLink to='/login' className={({ isActive, isPending }) => isPending ? "text-black" : isActive ? "bg-[#ff566a] text-white py-4 px-8 rounded-md" : "bg-[#e8e8e8] py-4 px-8 rounded-md hover:bg-[#ff566a] hover:text-white"}>
+                            <NavLink to='/login' className={({ isActive, isPending }) => isPending ? "text-black" : isActive ? "bg-[#ff566a] text-white py-4 px-8 rounded-md" : "bg-[#ff566a] py-4 px-8 text-white rounded-md hover:bg-[#ff566a] hover:text-white"}>
                                 Login
                             </NavLink>
                         </>
@@ -110,7 +121,7 @@ const Navbar = () => {
                                         </NavLink>
 
                                         <p>
-                                            {user?.email}
+                                            {user?.displayName || user.email}
                                         </p>
                                     </div>
                                 </> : <>

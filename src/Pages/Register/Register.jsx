@@ -1,6 +1,6 @@
 import { FcGoogle } from "react-icons/fc";
 import { useContext, useState } from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../Hooks/AuthProvider";
 import toast from 'react-hot-toast';
 
@@ -8,7 +8,9 @@ const Register = () => {
     const [error, setError] = useState('');
     const [emailError, setEmailError] = useState('');
 
-    const { googleLogIn, userRegister } = useContext(AuthContext);
+    const { googleLogIn, userRegister, updateUserProfile } = useContext(AuthContext);
+
+    const navigate = useNavigate()
 
     const handleSocialLogin = (item) => {
         item()
@@ -25,6 +27,8 @@ const Register = () => {
 
         const form = new FormData(e.currentTarget)
 
+        const name = form.get('name');
+        const img = form.get('img');
         const email = form.get('email');
         const password = form.get('password');
 
@@ -37,7 +41,11 @@ const Register = () => {
             if (email) {
                 userRegister(email, password)
                     .then(result => {
-                        toast.success('Register successfully');
+                        updateUserProfile(name, img)
+                            .then(() => {
+                                toast.success('Register successfully');
+                                navigate('/')
+                            })
                     })
                     .catch(error => {
                         setEmailError(error.message)
@@ -65,10 +73,20 @@ const Register = () => {
                             <div className="w-full md:w-[500px] mx-auto mb-3">
                                 <div className="flex flex-col">
                                     <label className="text-white mb-1">
-                                        Name
+                                        Name <span className="text-[#ff566a]">*</span>
                                     </label>
 
-                                    <input type="text" name="text" placeholder="Enter your name" className="max-w-2xl bg-[#5e5beb] py-4 px-6 rounded-lg text-white placeholder:text-lg placeholder:text-white" />
+                                    <input type="text" name="name" placeholder="Enter your name" className="max-w-2xl bg-[#5e5beb] py-4 px-6 rounded-lg text-white placeholder:text-lg placeholder:text-white" required />
+                                </div>
+                            </div>
+
+                            <div className="w-full md:w-[500px] mx-auto mb-3">
+                                <div className="flex flex-col">
+                                    <label className="text-white mb-1">
+                                        Photo Url <span className="text-[#ff566a]">*</span>
+                                    </label>
+
+                                    <input type="text" name='img' placeholder="Enter your photo url" className="max-w-2xl bg-[#5e5beb] py-4 px-6 rounded-lg text-white placeholder:text-lg placeholder:text-white" required />
                                 </div>
                             </div>
 
@@ -92,7 +110,7 @@ const Register = () => {
                                         Password <span className="text-[#ff566a]">*</span>
                                     </label>
 
-                                    <input type="password" name="password" placeholder="Enter your password" className="max-w-2xl bg-[#5e5beb] py-4 px-6 rounded-lg text-white placeholder:text-lg placeholder:text-white" />
+                                    <input type="password" name="password" placeholder="Enter your password" className="max-w-2xl bg-[#5e5beb] py-4 px-6 rounded-lg text-white placeholder:text-lg placeholder:text-white" required />
                                 </div>
 
                                 <p className="px-4 text-[#ff566a] text-sm mt-2">

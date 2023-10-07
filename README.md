@@ -1,6 +1,6 @@
 # EventFlow
 ## [Live ink](https://linktodocumentation)
-### This is a event management website. I have implemented some fundamentals in terms of navigation, user authentication, error handling, dynamic content display, showcasing services, and facilitating ticket purchases for events. These functionalities are crucial for providing a comprehensive and user-friendly experience to visitors.
+### This is a Corporate Events - Conferences and Seminars website. I have implemented some fundamentals in terms of navigation, user authentication, error handling, dynamic content display, showcasing services, and facilitating ticket purchases for events. These functionalities are crucial for providing a comprehensive and user-friendly experience to visitors.
 
 - ### Router Implementation: A router allows for seamless navigation between different pages or sections of website without requiring a full page refresh. 
 
