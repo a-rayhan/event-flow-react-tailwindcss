@@ -2,7 +2,10 @@ import { NavLink } from "react-router-dom";
 
 const Banner = () => {
     return (
-        <div className="max-w-7xl mx-auto px-5 pt-8 md:pt-16">
+        <div className="max-w-7xl mx-auto px-5 pt-8 md:pt-16" data-aos="fade-zoom-in"
+        data-aos-easing="ease-in-back"
+        data-aos-delay="800"
+        data-aos-offset="0">
             <div>
                 <h1 className="text-4xl sm:text-6xl xl:text-7xl font-bold text-center leading-tight text-[#211f54] mb-4">
                     Events, Meetups & <br /> Conferences

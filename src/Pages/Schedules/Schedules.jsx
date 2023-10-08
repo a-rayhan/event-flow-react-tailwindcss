@@ -6,7 +6,8 @@ const Schedules = () => {
     const schedulesData = useLoaderData();
 
     return (
-        <div className="bg-[#f4f4f4]">
+        <div className="bg-[#f4f4f4]" data-aos="fade-up"
+        data-aos-duration="1000">
             <div className="max-w-7xl mx-auto px-5 py-20 md:py-28 lg:py-36">
                 <div>
                     <div>

@@ -5,7 +5,8 @@ const WhyShouldJoin = () => {
     return (
         <div className="max-w-7xl mx-auto px-5 py-20 md:py-28 lg:py-36">
             <div className="flex flex-col xl:flex-row justify-between gap-14">
-                <div>
+                <div data-aos="fade-right"
+     data-aos-duration="1000">
                     <div>
                         <h1 className="text-4xl sm:text-5xl font-bold leading-tight text-[#211f54] mb-8">
                             Welcome to the Greatest Event Agency
@@ -51,7 +52,8 @@ const WhyShouldJoin = () => {
                     </div>
                 </div>
 
-                <div>
+                <div data-aos="fade-up"
+     data-aos-duration="2500">
                     <div className="flex flex-col  gap-6">
                         <div className="flex flex-col md:flex-row gap-6">
                             <div className="h-60 w-full rounded-3xl">

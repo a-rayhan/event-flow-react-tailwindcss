@@ -5,8 +5,8 @@ import { AuthContext } from "../../Hooks/AuthProvider";
 import toast from "react-hot-toast";
 
 const Login = () => {
+    const [passError, setPassError] = useState('');
     const [error, setError] = useState('');
-    const [emailError, setEmailError] = useState('');
 
     const { googleLogIn, userLogin } = useContext(AuthContext);
 
@@ -35,9 +35,10 @@ const Login = () => {
         const password = form.get('password');
 
         if (!/^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{6,}$/.test(password)) {
-            setError('You should at least six characters, uppercase, lowercase and number');
+            setPassError('Wrong password');
         }
         else {
+            setPassError('');
             setError('');
 
             if (email) {
@@ -47,7 +48,7 @@ const Login = () => {
                         navigate(location?.state ? location.state : '/')
                     })
                     .catch(error => {
-                        setEmailError(error.message)
+                        setError('Wrong email address')
                     })
             }
         }
@@ -78,6 +79,10 @@ const Login = () => {
 
                                     <input type="email" name="email" placeholder="Enter your email" className="max-w-2xl bg-[#5e5beb] py-4 px-6 rounded-lg text-white placeholder:text-lg placeholder:text-white" required />
                                 </div>
+
+                                <p className="px-4 text-[#ff566a] text-sm mt-2">
+                                    {error}
+                                </p>
                             </div>
 
                             <div className="md:w-[500px] mx-auto">
@@ -90,7 +95,7 @@ const Login = () => {
                                 </div>
 
                                 <p className="px-4 text-[#ff566a] text-sm mt-2">
-                                    {error}
+                                    {passError}
                                 </p>
                             </div>
 

@@ -6,10 +6,11 @@ const Services = () => {
     const servicesData = useLoaderData();
 
     return (
-        <div>
+        <div data-aos="fade-up"
+        data-aos-duration="1000">
             <div className="max-w-7xl mx-auto px-5 py-20 md:py-28 lg:py-36">
                 <div>
-                    <h1 className="text-4xl sm:text-5xl font-bold leading-tight text-[#211f54] mb-4 text-center">
+                    <h1 className="text-4xl sm:text-5xl font-bold leading-tight text-[#211f54] mb-4 text-center md:px-10">
                         Professional Services Form Us
                     </h1>
 

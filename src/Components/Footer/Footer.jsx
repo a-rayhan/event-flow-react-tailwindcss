@@ -5,7 +5,8 @@ import { NavLink } from "react-router-dom";
 const Footer = () => {
     return (
         <div>
-            <div className="max-w-7xl mx-auto px-5 py-12 lg:py-20 xl:py-28 flex flex-col xl:flex-row xl:gap-24 gap-10">
+            <div className="max-w-7xl mx-auto px-5 py-12 lg:py-20 xl:py-28 flex flex-col xl:flex-row xl:gap-24 gap-10" data-aos="fade-up"
+        data-aos-duration="1000">
                 <div className="">
                     <NavLink to='/' className='text-[40px] font-bold flex items-center mb-3'>
                         <IoMdMicrophone className="text-[#4845e3] text-5xl" />
@@ -46,7 +47,10 @@ const Footer = () => {
 
             <hr />
 
-            <div className="max-w-7xl mx-auto px-5 py-5 flex justify-center gap-24">
+            <div className="max-w-7xl mx-auto px-5 py-5 flex justify-center gap-24" data-aos="fade-zoom-in"
+        data-aos-easing="ease-in-back"
+        data-aos-delay="100"
+        data-aos-offset="0">
                 <p className="text-lg">
                 Copyright © All rights reserved <NavLink to='/' className='underline font-semibold text-[#4845e3]'> EventFlow</NavLink>
                 </p>

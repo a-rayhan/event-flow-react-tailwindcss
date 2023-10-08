@@ -1,5 +1,5 @@
 # EventFlow
-## [Live ink](https://linktodocumentation)
+## [Live ink](https://6522cff4d8432b4eb7dbd037--dulcet-sable-c5638d.netlify.app/)
 ### This is a Corporate Events - Conferences and Seminars website. I have implemented some fundamentals in terms of navigation, user authentication, error handling, dynamic content display, showcasing services, and facilitating ticket purchases for events. These functionalities are crucial for providing a comprehensive and user-friendly experience to visitors.
 
 - ### Router Implementation: A router allows for seamless navigation between different pages or sections of website without requiring a full page refresh. 
